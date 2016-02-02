@@ -9,7 +9,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     else
       unless current_user
         unless user = User.find_by_name(name)
-          user - User.create({
+          user = User.create({
             name: name,
             password: Devise.friendly_token[0,8],
             email: "#{UUIDTools::UUID.random_create}@myshareup.com"
