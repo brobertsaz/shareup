@@ -1,0 +1,20 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <h1>Welcome back {{ user.name }}</h1>
+    <div>
+      <ul class="nav navbar-nav navbar-right">
+          <li><a href="/users/sign_out">Sign out</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <ul class="col-xs-12">
+      <li class="row" data-ng-repeat="article in articles | orderBy:publishedDate:false">
+      <article-listing ng-model="article" on-share="share(recipient, article)"></article-listing>
+      </li>
+    </ul>
+  </div>
+</div>
+

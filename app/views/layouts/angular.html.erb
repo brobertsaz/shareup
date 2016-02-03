@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang='en' data-ng-app='myApp'>
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
     <head>
         <meta charset="utf-8">
         <meta name="description" content="">
@@ -8,13 +8,12 @@
         <%= csrf_meta_tags %>
         <%= stylesheet_link_tag "application", media: "all" %>
         <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" %>
-        <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" %>
      </head>
     <body>
         <div class="container">
-          <h1>Hello There</h1>
           <div data-ng-view></div>
         </div>
         <%= javascript_include_tag "application" %>
+        <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" %>
     </body>
 </html>
